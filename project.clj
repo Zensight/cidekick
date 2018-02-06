@@ -1,5 +1,7 @@
-(defproject cidekick "0.1.0"
+(defproject co.zensight/cidekick "0.1.0-SNAPSHOT"
   :description "CI Sidekick: Not a cider nrepl plugin"
+  :deploy-repositories [["releases" :clojars]
+                        ["snapshots" :clojars]]
   :url "https://github.com/Zensight/cidekick"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
