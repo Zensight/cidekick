@@ -27,7 +27,6 @@
   "Purge CI databases that are more than a week old."
   {}
   [project args]
-  (println (str "purge-old-dbs: "))
   (let [opts (->> args
                   (apply hash-map)
                   (map (fn [[k v]] [(read-string k) v]))
@@ -72,7 +71,7 @@
       (throw (RuntimeException. ":db-config-json argument required!"))
       (let [db-config (parse-db-config-json db-config-json)
             pg-db-config (assoc db-config :database "postgres")
-            date (ftime/unparse date-format (ctime/minus (ctime/now) (ctime/days 8)))
+            date (ftime/unparse date-format (ctime/now))
             uuid (-> (UUID/randomUUID)
                      .toString
                      (cstr/replace #"-" ""))
