@@ -1,4 +1,4 @@
-(defproject co.zensight/cidekick "1.0.0"
+(defproject co.zensight/cidekick "1.0.1-SNAPSHOT"
   :description "CI Sidekick: Not a cider nrepl plugin"
   :deploy-repositories [["releases" :clojars]
                         ["snapshots" :clojars]]
